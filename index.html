@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Halloween Lights</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Metal+Mania&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <header>
+            <h1>Happy Halloween!</h1>
+            <p>Control the spooky lights below and enjoy the Halloween vibes!</p>
+        </header>
+
+        <main>
+            <!-- Control Panel -->
+            <section class="controls">
+                <div class="control-group">
+                    <button id="spookyBtn">Start Display</button>
+                </div>
+
+                <div class="control-group">
+                    <label for="interval">Interval (ms):</label>
+                    <input type="number" id="interval" value="500" min="100">
+                </div>
+
+                <!-- Bonus: Color Picker for custom light bulbs -->
+                <div class="control-group">
+                    <label for="customColor">Custom Fill Color:</label>
+                    <input type="color" id="customColor" value="#ff5500">
+                </div>
+
+                <!-- Bonus: Max Opacity / Glow Intensity -->
+                <div class="control-group">
+                    <label for="intensity">Glow Intensity:</label>
+                    <input type="range" id="intensity" min="0.2" max="1" step="0.1" value="1">
+                </div>
+
+                <!-- Bonus: Size Adjuster -->
+                <div class="control-group">
+                    <label for="bulbSize">Bulb Size (px):</label>
+                    <input type="range" id="bulbSize" min="30" max="120" step="5" value="60">
+                </div>
+
+                <!-- Bonus: Row Counter (1 to 7) -->
+                <div class="control-group">
+                    <label for="rowCount">Rows (1-7):</label>
+                    <input type="number" id="rowCount" value="1" min="1" max="7">
+                </div>
+            </section>
+
+            <!-- Main Display Container for grid/row manipulation -->
+            <div id="gridContainer">
+                <section class="lights">
+                    <div class="light-bulb purple"></div>
+                    <div class="light-bulb orange"></div>
+                    <div class="light-bulb red"></div>
+                    <div class="light-bulb green"></div>
+                    <div class="light-bulb white"></div>
+                    <div class="light-bulb orange"></div>
+                    <div class="light-bulb purple"></div>
+                </section>
+
+                <!-- Fixed Decorative Corner CSS Shapes -->
+                <div class="spooky-corner left-corner">
+                    <!-- CSS Ghost Shape -->
+                    <div class="css-ghost">
+                        <div class="ghost-eyes"></div>
+                        <div class="ghost-skirt"></div>
+                    </div>
+                    <!-- CSS Pumpkin Shape -->
+                    <div class="css-pumpkin">
+                        <div class="pumpkin-stem"></div>
+                        <div class="pumpkin-eyes"></div>
+                        <div class="pumpkin-mouth"></div>
+                    </div>
+                </div>
+
+                <div class="spooky-corner right-corner">
+                    <div class="css-pumpkin">
+                        <div class="pumpkin-stem"></div>
+                        <div class="pumpkin-eyes"></div>
+                        <div class="pumpkin-mouth"></div>
+                    </div>
+                    <div class="css-ghost">
+                        <div class="ghost-eyes"></div>
+                        <div class="ghost-skirt"></div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+        <script src="index.js"></script>
+    </body>
+
+</html>
